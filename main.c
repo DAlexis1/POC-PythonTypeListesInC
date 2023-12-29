@@ -8,10 +8,11 @@ int main() {
     //AppendToArrayChar(&my_array,'a');
     //printf("%c",*(char*)my_array.values);
     FillArrayChar(&my_array,(char[]){'a', 'b'},2);
-    InsertInArrayChar(&my_array,'c',1);
-    printf("%s",(char*)my_array.values);
-    free(my_array.values);
-
+    InsertInArrayChar(&my_array,'c',2);
+    printf("%c\n", GetCharFromArray(&my_array,1));
+    char test = PopCharFromArray(&my_array,1);
+    printf("%s\n",(char*)my_array.values);
+    printf("%c",test);
+    FreeTheArray(&my_array);
     return 0;
-
 }
